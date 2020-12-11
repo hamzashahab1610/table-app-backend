@@ -42,8 +42,19 @@ app.get("/", (req, res) => {
 
 require("./app/routes/note.routes.js")(app);
 require("./app/routes/market.routes.js")(app);
+require("./app/routes/company.routes.js")(app);
 
-// listen for requests
-app.listen(3000, () => {
-	console.log("Server is listening on port 3000");
+// Set static folder
+app.use(express.static("build"));
+
+// index.html for all page routes
+app.get("*", (req, res) => {
+	res.sendFile(path.resolve(__dirname, "build", "index.html"));
+});
+//}
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+	console.log(`Server Running at ${port}`);
 });
