@@ -30,17 +30,17 @@ exports.create = (req, res) => {
 		});
 };
 
-// Retrieve and return all companys from the database.
+// Retrieve and return all companies from the database.
 exports.findAll = (req, res) => {
 	Company.find()
-		.then((companys) => {
-			res.send(companys);
+		.then((companies) => {
+			res.send(companies);
 		})
 		.catch((err) => {
 			res.status(500).send({
 				message:
 					err.message ||
-					"Some error occurred while retrieving companys.",
+					"Some error occurred while retrieving companies.",
 			});
 		});
 };
