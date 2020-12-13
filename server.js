@@ -43,6 +43,14 @@ mongoose
 require("./app/routes/note.routes.js")(app);
 require("./app/routes/market.routes.js")(app);
 require("./app/routes/company.routes.js")(app);
+require("./app/routes/keyword.routes.js")(app);
+require("./app/routes/keyword_count.routes.js")(app);
+require("./app/routes/app.routes.js")(app);
+require("./app/routes/model.routes.js")(app);
+require("./app/routes/shell.routes.js")(app);
+require("./app/routes/shell.routes.js")(app);
+require("./app/routes/ad.routes.js")(app);
+require("./app/routes/vc.routes.js")(app);
 
 // Set static folder
 app.use(express.static("build"));

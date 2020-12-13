@@ -13,6 +13,10 @@ exports.create = (req, res) => {
 	const company = new Company({
 		company_name: req.body.company_name || "Untitled Company",
 		keywords: req.body.keywords,
+		total_funding: req.body.total_funding,
+		last_funding_date: req.body.last_funding_date,
+		last_funding_amount: req.body.last_funding_amount,
+		top_player: req.body.top_player,
 	});
 
 	// Save Company in the database
@@ -86,6 +90,10 @@ exports.update = (req, res) => {
 		{
 			company_name: req.body.company_name || "Untitled Company",
 			keywords: req.body.keywords,
+			total_funding: req.body.total_funding,
+			last_funding_date: req.body.last_funding_date,
+			last_funding_amount: req.body.last_funding_amount,
+			top_player: req.body.top_player,
 		},
 		{ new: true },
 	)
