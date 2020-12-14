@@ -51,6 +51,7 @@ require("./app/routes/shell.routes.js")(app);
 require("./app/routes/shell.routes.js")(app);
 require("./app/routes/ad.routes.js")(app);
 require("./app/routes/vc.routes.js")(app);
+require("./app/routes/funding.routes.js")(app);
 
 // Set static folder
 app.use(express.static("build"));

@@ -6,7 +6,7 @@ const FundingSchema = mongoose.Schema(
 		company: String,
 		market: String,
 		date: String,
-		amount: String,
+		amount: Number,
 		round: String,
 	},
 	{

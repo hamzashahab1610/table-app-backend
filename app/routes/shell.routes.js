@@ -2,17 +2,17 @@ module.exports = (app) => {
 	const shells = require("../controllers/shell.controller.js");
 
 	// Create a new Note
-	app.post("/shells", shells.create);
+	app.post("/api/shells", shells.create);
 
 	// Retrieve all Notes
-	app.get("/shells", shells.findAll);
+	app.get("/api/shells", shells.findAll);
 
 	// Retrieve a single Note with shellId
-	app.get("/shells/:shellId", shells.findOne);
+	app.get("/api/shells/:shellId", shells.findOne);
 
 	// Update a Note with shellId
-	app.patch("/shells/:shellId", shells.update);
+	app.patch("/api/shells/:shellId", shells.update);
 
 	// Delete a Note with shellId
-	app.delete("/shells/:shellId", shells.delete);
+	app.delete("/api/shells/:shellId", shells.delete);
 };

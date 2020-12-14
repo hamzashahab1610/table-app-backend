@@ -4,7 +4,7 @@ const AdSchema = mongoose.Schema(
 	{
 		site: String,
 		ad_type: String,
-		ad_costs: String,
+		ad_costs: Number,
 		contact_info: String,
 	},
 	{

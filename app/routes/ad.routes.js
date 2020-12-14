@@ -2,17 +2,17 @@ module.exports = (app) => {
 	const ads = require("../controllers/ad.controller.js");
 
 	// Create a new Note
-	app.post("/ads", ads.create);
+	app.post("/api/ads", ads.create);
 
 	// Retrieve all Notes
-	app.get("/ads", ads.findAll);
+	app.get("/api/ads", ads.findAll);
 
 	// Retrieve a single Note with adId
-	app.get("/ads/:adId", ads.findOne);
+	app.get("/api/ads/:adId", ads.findOne);
 
 	// Update a Note with adId
-	app.patch("/ads/:adId", ads.update);
+	app.patch("/api/ads/:adId", ads.update);
 
 	// Delete a Note with adId
-	app.delete("/ads/:adId", ads.delete);
+	app.delete("/api/ads/:adId", ads.delete);
 };
