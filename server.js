@@ -53,6 +53,17 @@ require("./app/routes/shell.routes.js")(app);
 require("./app/routes/ad.routes.js")(app);
 require("./app/routes/vc.routes.js")(app);
 require("./app/routes/funding.routes.js")(app);
+require("./app/routes/user.routes.js")(app);
+require("./app/routes/neural_project.routes.js")(app);
+require("./app/routes/lead.routes.js")(app);
+require("./app/routes/supplier.routes.js")(app);
+require("./app/routes/pricing.routes.js")(app);
+require("./app/routes/feature.routes.js")(app);
+require("./app/routes/question.routes.js")(app);
+require("./app/routes/term.routes.js")(app);
+require("./app/routes/tool.routes.js")(app);
+require("./app/routes/name_idea.routes.js")(app);
+require("./app/routes/job.routes.js")(app);
 
 // Set static folder
 app.use(express.static("build"));
