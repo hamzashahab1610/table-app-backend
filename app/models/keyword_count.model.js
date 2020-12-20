@@ -5,7 +5,7 @@ const KeywordCountSchema = mongoose.Schema(
 		keyword: String,
 		search_engine: String,
 		country: String,
-		count: String,
+		count: Number,
 	},
 	{
 		timestamps: true,

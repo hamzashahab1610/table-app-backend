@@ -64,6 +64,9 @@ require("./app/routes/term.routes.js")(app);
 require("./app/routes/tool.routes.js")(app);
 require("./app/routes/name_idea.routes.js")(app);
 require("./app/routes/job.routes.js")(app);
+require("./app/routes/integration.routes.js")(app);
+require("./app/routes/adon.routes.js")(app);
+require("./app/routes/news.routes.js")(app);
 
 // Set static folder
 app.use(express.static("build"));

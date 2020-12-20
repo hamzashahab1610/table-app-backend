@@ -11,12 +11,14 @@ exports.create = (req, res) => {
 
 	// Create a Company
 	const company = new Company({
-		company_name: req.body.company_name || "Untitled Company",
+		company_name: req.body.company_name,
 		keywords: req.body.keywords,
 		total_funding: req.body.total_funding,
 		last_funding_date: req.body.last_funding_date,
 		last_funding_amount: req.body.last_funding_amount,
 		top_player: req.body.top_player,
+		tagline_text_block: req.body.tagline_text_block,
+		revenue: req.body.revenue,
 	});
 
 	// Save Company in the database
@@ -88,12 +90,14 @@ exports.update = (req, res) => {
 	Company.findByIdAndUpdate(
 		req.params.companyId,
 		{
-			company_name: req.body.company_name || "Untitled Company",
+			company_name: req.body.company_name,
 			keywords: req.body.keywords,
 			total_funding: req.body.total_funding,
 			last_funding_date: req.body.last_funding_date,
 			last_funding_amount: req.body.last_funding_amount,
 			top_player: req.body.top_player,
+			tagline_text_block: req.body.tagline_text_block,
+			revenue: req.body.revenue,
 		},
 		{ new: true },
 	)

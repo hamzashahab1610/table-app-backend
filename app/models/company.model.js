@@ -8,6 +8,8 @@ const CompanySchema = mongoose.Schema(
 		last_funding_date: String,
 		last_funding_amount: Number,
 		top_player: Boolean,
+		tagline_text_block: String,
+		revenue: String,
 	},
 	{
 		timestamps: true,
