@@ -12,7 +12,7 @@ exports.create = (req, res) => {
 	// Create a Video
 	const video = new Video({
 		video: req.body.name,
-		video_url: req.body.video_url,
+		video_url: req.body.url,
 		companies: req.body.companies,
 	});
 
@@ -83,7 +83,7 @@ exports.update = (req, res) => {
 		req.params.videoId,
 		{
 			video: req.body.name,
-			video_url: req.body.video_url,
+			video_url: req.body.url,
 			companies: req.body.companies,
 		},
 		{ new: true },

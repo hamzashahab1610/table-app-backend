@@ -7,6 +7,8 @@ module.exports = (app) => {
 	// Retrieve all Notes
 	app.get("/api/companies", companies.findAll);
 
+	app.get("/api/topPlayers", companies.findTopPlayer);
+
 	// Retrieve a single Note with companyId
 	app.get("/api/companies/:companyId", companies.findOne);
 

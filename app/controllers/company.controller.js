@@ -51,6 +51,18 @@ exports.findAll = (req, res) => {
 		});
 };
 
+//Find companies which are top players
+exports.findTopPlayer = (req, res) => {
+	Company.find({ top_player: true }, function (err, docs) {
+		if (!docs) {
+			return res.status(404).send({
+				message: "Top Player Companies not found",
+			});
+		}
+		res.send(docs);
+	});
+};
+
 // Find a single company with a companyId
 exports.findOne = (req, res) => {
 	Company.findById(req.params.companyId)
