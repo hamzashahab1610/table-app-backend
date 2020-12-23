@@ -11,6 +11,7 @@ exports.create = (req, res) => {
 
 	// Create a Video
 	const video = new Video({
+		video: req.body.name,
 		video_url: req.body.video_url,
 		companies: req.body.companies,
 	});
@@ -81,6 +82,7 @@ exports.update = (req, res) => {
 	Video.findByIdAndUpdate(
 		req.params.videoId,
 		{
+			video: req.body.name,
 			video_url: req.body.video_url,
 			companies: req.body.companies,
 		},
