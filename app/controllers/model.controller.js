@@ -11,7 +11,7 @@ exports.create = (req, res) => {
 
 	// Create a Model
 	const model = new Model({
-		model: req.body.model,
+		model_name: req.body.model_name,
 		category: req.body.category,
 		description: req.body.description,
 	});
@@ -83,7 +83,7 @@ exports.update = (req, res) => {
 		req.params.modelId,
 		{
 			//model_name: req.body.model_name || "Untitled Model",
-			model: req.body.model,
+			model_name: req.body.model_name,
 			category: req.body.category,
 			description: req.body.description,
 		},
