@@ -4,9 +4,9 @@ const CompanySchema = mongoose.Schema(
 	{
 		company_name: String,
 		keywords: String,
-		total_funding: Number,
+		total_funding: String,
 		last_funding_date: String,
-		last_funding_amount: Number,
+		last_funding_amount: String,
 		top_player: Boolean,
 		tagline_text_block: String,
 		revenue: String,
