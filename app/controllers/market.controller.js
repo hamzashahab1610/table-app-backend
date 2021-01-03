@@ -14,6 +14,7 @@ exports.create = (req, res) => {
 		market_name: req.body.market_name || "Untitled Market",
 		companies: req.body.companies,
 		keywords: req.body.keywords,
+		market_size: req.body.market_size,
 	});
 
 	// Save Market in the database
@@ -86,6 +87,7 @@ exports.update = (req, res) => {
 			market_name: req.body.market_name || "Untitled Market",
 			companies: req.body.companies,
 			keywords: req.body.keywords,
+			market_size: req.body.market_size,
 		},
 		{ new: true },
 	)
