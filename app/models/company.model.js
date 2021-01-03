@@ -10,6 +10,7 @@ const CompanySchema = mongoose.Schema(
 		top_player: Boolean,
 		tagline_text_block: String,
 		revenue: String,
+		url: String,
 	},
 	{
 		timestamps: true,

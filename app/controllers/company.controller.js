@@ -19,6 +19,7 @@ exports.create = (req, res) => {
 		top_player: req.body.top_player,
 		tagline_text_block: req.body.tagline_text_block,
 		revenue: req.body.revenue,
+		url: req.body.url,
 	});
 
 	// Save Company in the database
@@ -110,6 +111,7 @@ exports.update = (req, res) => {
 			top_player: req.body.top_player,
 			tagline_text_block: req.body.tagline_text_block,
 			revenue: req.body.revenue,
+			url: req.body.url,
 		},
 		{ new: true },
 	)
