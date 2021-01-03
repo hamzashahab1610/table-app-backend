@@ -15,6 +15,9 @@ exports.create = (req, res) => {
 		location: req.body.location,
 		markets: req.body.markets,
 		companies_funded: req.body.companies_funded,
+		url: req.body.url,
+		contacts: req.body.contacts,
+		investment_criteria: req.body.investment_criteria,
 	});
 
 	// Save Vc in the database
@@ -84,6 +87,9 @@ exports.update = (req, res) => {
 			location: req.body.location,
 			markets: req.body.markets,
 			companies_funded: req.body.companies_funded,
+			url: req.body.url,
+			contacts: req.body.contacts,
+			investment_criteria: req.body.investment_criteria,
 		},
 		{ new: true },
 	)

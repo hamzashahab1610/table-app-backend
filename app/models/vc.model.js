@@ -6,6 +6,9 @@ const VCSchema = mongoose.Schema(
 		location: String,
 		markets: String,
 		companies_funded: String,
+		url: String,
+		contacts: String,
+		investment_criteria: String,
 	},
 	{
 		timestamps: true,
