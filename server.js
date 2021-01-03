@@ -70,6 +70,7 @@ require("./app/routes/news.routes.js")(app);
 require("./app/routes/image.routes.js")(app);
 require("./app/routes/file.routes.js")(app);
 require("./app/routes/video.routes.js")(app);
+require("./app/routes/review_site.routes.js")(app);
 
 // Set static folder
 app.use(express.static("build"));
