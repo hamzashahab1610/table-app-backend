@@ -37,6 +37,21 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
 	Market.find()
 		.then((markets) => {
+			markets = markets;
+			markets.map((market) => {
+				Company.collection
+					.count({
+						market: market.market_name,
+					})
+					.then((res) => {
+						Market.findByIdAndUpdate(
+							market._id,
+							{ companies: res },
+							{ new: true },
+						).then((market) => console.log("market", market));
+					});
+			});
+
 			res.send(markets);
 		})
 		.catch((err) => {
@@ -56,7 +71,6 @@ exports.findCompanyCount = (req, res) => {
 				message: "Top Player Companies not found",
 			});
 		}
-		console.log("docs", docs);
 		res.send(docs);
 	});
 };
