@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const CompanySchema = mongoose.Schema(
 	{
 		company_name: String,
+		market: String,
 		keywords: String,
 		total_funding: String,
 		last_funding_date: String,

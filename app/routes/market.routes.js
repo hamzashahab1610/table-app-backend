@@ -7,6 +7,9 @@ module.exports = (app) => {
 	// Retrieve all Notes
 	app.get("/api/markets", markets.findAll);
 
+	//Find Company Count
+	app.get("/api/markets/:market_name", markets.findCompanyCount);
+
 	// Retrieve a single Note with marketId
 	app.get("/api/markets/:marketId", markets.findOne);
 

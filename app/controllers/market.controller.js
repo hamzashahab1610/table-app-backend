@@ -1,4 +1,5 @@
 const Market = require("../models/market.model.js");
+const Company = require("../models/company.model.js");
 
 // Create and Save a new Market
 exports.create = (req, res) => {
@@ -45,6 +46,19 @@ exports.findAll = (req, res) => {
 					"Some error occurred while retrieving markets.",
 			});
 		});
+};
+
+//Find company count of a market
+exports.findCompanyCount = (req, res) => {
+	Company.find({ market: req.params.market_name }, function (err, docs) {
+		if (!docs) {
+			return res.status(404).send({
+				message: "Top Player Companies not found",
+			});
+		}
+		console.log("docs", docs);
+		res.send(docs);
+	});
 };
 
 // Find a single market with a marketId

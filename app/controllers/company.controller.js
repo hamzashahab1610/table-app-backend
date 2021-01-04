@@ -12,6 +12,7 @@ exports.create = (req, res) => {
 	// Create a Company
 	const company = new Company({
 		company_name: req.body.company_name,
+		market: req.body.market,
 		keywords: req.body.keywords,
 		total_funding: req.body.total_funding,
 		last_funding_date: req.body.last_funding_date,
@@ -104,6 +105,7 @@ exports.update = (req, res) => {
 		req.params.companyId,
 		{
 			company_name: req.body.company_name,
+			market: req.body.market,
 			keywords: req.body.keywords,
 			total_funding: req.body.total_funding,
 			last_funding_date: req.body.last_funding_date,
